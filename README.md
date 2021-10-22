@@ -1,4 +1,13 @@
-# Next.js + Tailwind CSS Example
+# Instagram Clone
+
+### Next.js + Tailwind CSS
+
+### Next.js
+
+### Tailwind CSS
+
+npm install @heroicons/react
+npm install @tailwindcss/forms
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
