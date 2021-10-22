@@ -8,7 +8,6 @@ import {
 	MenuIcon,
 } from '@heroicons/react/outline'
 import { HomeIcon } from '@heroicons/react/solid'
-import userIcon from '../assets/avatar-1.png'
 
 function Header() {
 	return (
@@ -58,7 +57,7 @@ function Header() {
 					<UserGroupIcon className='navBtn' />
 					<HeartIcon className='navBtn' />
 					<img
-						src='https://image.flaticon.com/icons/png/512/107/107376.png'
+						src='/static/images/avatar-1.png'
 						alt='user icon'
 						className='w-10 h-10 border-2 border-gray-900 rounded-full cursor-pointer'
 					/>
