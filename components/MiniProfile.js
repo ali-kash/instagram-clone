@@ -1,4 +1,19 @@
+import { signOut, useSession } from 'next-auth/client'
+
 const MiniProfile = () => {
+	const [session] = useSession()
+	console.log(session)
+
+	// const sessionUser = session.user
+
+	// const userEmail = sessionUser.email
+	// const userImage = sessionUser.image
+	// const userName = sessionUser.name
+	// const userId = sessionUser.id
+	// const userTag = sessionUser.name?.split(' ').join('').toLocaleLowerCase()
+
+	// console.log(userEmail, userImage, userName, userId, userTag)
+
 	return (
 		<div className='flex items-center justify-between mt-14 ml-10'>
 			<img

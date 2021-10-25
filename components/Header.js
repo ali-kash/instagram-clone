@@ -6,10 +6,14 @@ import {
 	HeartIcon,
 	PaperAirplaneIcon,
 	MenuIcon,
+	LogoutIcon,
 } from '@heroicons/react/outline'
 import { HomeIcon } from '@heroicons/react/solid'
+import { useSession, signIn, signOut } from 'next-auth/client'
 
 function Header() {
+	const [session, loading] = useSession()
+
 	return (
 		<div className='shadow-sm border-b bg-white sticky top-0 z-50'>
 			<div className='flex justify-between max-w-6xl mx-5 xl:mx-auto'>
@@ -47,20 +51,30 @@ function Header() {
 				<div className='flex items-center justify-end space-x-4'>
 					<HomeIcon className='navBtn' />
 					<MenuIcon className='h-6 md:hidden cursor-pointer' />
-					<div className='relative navBtn'>
-						<PaperAirplaneIcon className='navBtn -my-1 rotate-45' />
-						<div className='absolute -top-3 -right-2 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white'>
-							3
-						</div>
-					</div>
-					<PlusCircleIcon className='navBtn' />
-					<UserGroupIcon className='navBtn' />
-					<HeartIcon className='navBtn' />
-					<img
-						src='/static/images/avatar-1.png'
-						alt='user icon'
-						className='w-10 h-10 border-2 border-gray-900 rounded-full cursor-pointer'
-					/>
+
+					{session ? (
+						<>
+							<div className='relative navBtn'>
+								<PaperAirplaneIcon className='navBtn -my-1 rotate-45' />
+								<div className='absolute -top-3 -right-2 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white'>
+									3
+								</div>
+							</div>
+							<PlusCircleIcon className='navBtn' />
+							<UserGroupIcon className='navBtn' />
+							<HeartIcon className='navBtn' />
+							<img
+								src={session.user.image}
+								alt={session.user.name}
+								className='w-10 h-10 border-2 border-gray-900 rounded-full cursor-pointer'
+								onClick={signOut}
+							/>
+						</>
+					) : (
+						<button type='button' onClick={signIn} className='text-black'>
+							Sign In
+						</button>
+					)}
 				</div>
 			</div>
 		</div>
