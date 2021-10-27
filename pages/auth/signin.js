@@ -10,7 +10,7 @@ function signin({ providers }) {
 			<div className='flex flex-col items-center justify-center min-h-screen py-2 -mt-56 px-14 text-center'>
 				<img
 					className='w-80'
-					src='https://links.papareact.com/ocw'
+					src='/static/images/instagram-logo-lg.png'
 					alt='instagram icon'
 				/>
 				<p className='font-xs italic'>

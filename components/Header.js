@@ -27,7 +27,7 @@ function Header() {
 					className='relative hidden lg:inline-grid w-24 cursor-pointer'
 				>
 					<Image
-						src='https://links.papareact.com/ocw'
+						src='/static/images/instagram-logo-lg.png'
 						layout='fill'
 						objectFit='contain'
 					/>
@@ -37,7 +37,7 @@ function Header() {
 					className='relative w-10 lg:hidden flex-shrink-0 cursor-pointer'
 				>
 					<Image
-						src='https://links.papareact.com/jjm'
+						src='/static/images/instagram-logo-sm.png'
 						layout='fill'
 						objectFit='contain'
 					/>
