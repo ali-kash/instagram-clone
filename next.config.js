@@ -1,6 +1,6 @@
 module.exports = {
 	images: {
 		loader: 'imgix',
-		path: 'https://instaclone.dyspo.ca/',
+		path: 'http://localhost:3000/',
 	},
 }
