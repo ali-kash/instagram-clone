@@ -1,6 +1,6 @@
 module.exports = {
 	images: {
 		loader: 'imgix',
-		path: 'https://insta-clone-311021.netlify.app/',
+		path: 'https://instagram-clone-8d2270.netlify.app/',
 	},
 }
